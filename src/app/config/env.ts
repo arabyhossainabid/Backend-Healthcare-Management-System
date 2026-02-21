@@ -16,7 +16,7 @@ interface EnvConfig {
     REFRESH_TOKEN_EXPIRES_IN: string;
     BETTER_AUTH_SESSION_TOKEN_EXPIRES_IN: string;
     BETTER_AUTH_SESSION_TOKEN_UPDATE_AGE: string;
-    EMAIL_SENDER:{
+    EMAIL_SENDER: {
         SMTP_USER: string;
         SMTP_PASS: string;
         SMTP_HOST: string;
@@ -27,12 +27,12 @@ interface EnvConfig {
     GOOGLE_CLIENT_SECRET: string;
     GOOGLE_CALLBACK_URL: string;
     FRONTEND_URL: string;
-    CLOUDINARY:{
+    CLOUDINARY: {
         CLOUDINARY_CLOUD_NAME: string;
         CLOUDINARY_API_KEY: string;
         CLOUDINARY_API_SECRET: string;
     },
-    STRIPE:{
+    STRIPE: {
         STRIPE_SECRET_KEY: string;
         STRIPE_WEBHOOK_SECRET: string;
     },
@@ -75,8 +75,7 @@ const loadEnvVariables = (): EnvConfig => {
 
     requireEnvVariable.forEach((variable) => {
         if (!process.env[variable]) {
-            // throw new Error(`Environment variable ${variable} is required but not set in .env file.`);
-            throw new AppError(status.INTERNAL_SERVER_ERROR, `Environment variable ${variable} is required but not set in .env file.`);
+            console.warn(`⚠️ Warning: Environment variable ${variable} is not set.`);
         }
     })
 
