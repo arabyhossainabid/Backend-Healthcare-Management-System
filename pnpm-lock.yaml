@@ -67,7 +67,7 @@ importers:
         version: 6.14.1
       stripe:
         specifier: ^20.3.1
-        version: 20.3.1(@types/node@25.2.0)
+        version: 20.3.1(@types/node@20.19.33)
       uuid:
         specifier: ^13.0.0
         version: 13.0.0
@@ -100,8 +100,8 @@ importers:
         specifier: ^1.4.13
         version: 1.4.13
       '@types/node':
-        specifier: ^25.2.0
-        version: 25.2.0
+        specifier: ^20.19.33
+        version: 20.19.33
       '@types/nodemailer':
         specifier: ^7.0.9
         version: 7.0.9
@@ -511,6 +511,9 @@ packages:
 
   '@types/multer@1.4.13':
     resolution: {integrity: sha512-bhhdtPw7JqCiEfC9Jimx5LqX9BDIPJEh2q/fQ4bqbBPtyEZYr3cvF22NwG0DmPZNYA0CAf2CnqDB4KIGGpJcaw==}
+
+  '@types/node@20.19.33':
+    resolution: {integrity: sha512-Rs1bVAIdBs5gbTIKza/tgpMuG1k3U/UMJLWecIMxNdJFDMzcM5LOiLVRYh3PilWEYDIeUDv7bpiHPLPsbydGcw==}
 
   '@types/node@25.2.0':
     resolution: {integrity: sha512-DZ8VwRFUNzuqJ5khrvwMXHmvPe+zGayJhr2CDNiKB1WBE1ST8Djl00D0IC4vvNmHMdj6DlbYRIaFE7WHjlDl5w==}
@@ -1708,6 +1711,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
@@ -2100,6 +2106,10 @@ snapshots:
   '@types/multer@1.4.13':
     dependencies:
       '@types/express': 4.17.25
+
+  '@types/node@20.19.33':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/node@25.2.0':
     dependencies:
@@ -3260,9 +3270,9 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stripe@20.3.1(@types/node@25.2.0):
+  stripe@20.3.1(@types/node@20.19.33):
     optionalDependencies:
-      '@types/node': 25.2.0
+      '@types/node': 20.19.33
 
   supports-color@7.2.0:
     dependencies:
@@ -3311,6 +3321,8 @@ snapshots:
       - supports-color
 
   typescript@5.9.3: {}
+
+  undici-types@6.21.0: {}
 
   undici-types@7.16.0: {}
 
